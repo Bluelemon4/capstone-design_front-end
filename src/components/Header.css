@@ -1,0 +1,65 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+.Header {
+  text-align: center;
+}
+
+.header {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.header_image {
+  width: 200px;
+  height: 50px;
+}
+
+.header_text {
+  flex: 1;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header_buttons {
+    display: flex;
+    gap: 10px;
+    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
+    justify-content: flex-end;
+}
+
+.class_button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.complete_button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.log_button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  width: 78px;
+  padding: 8px 12px;
+  cursor: pointer;
+}

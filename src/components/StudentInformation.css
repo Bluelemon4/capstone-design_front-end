@@ -1,0 +1,22 @@
+.student_table {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+  }
+
+.student_table th {
+    width: calc(100% / 12);
+    height: 40px;
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.student_table th:nth-child(even) {
+  background-color: white;
+}
+
+.student_table th:nth-child(odd) {
+  background-color: skyblue;
+}
