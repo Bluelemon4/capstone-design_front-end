@@ -2,16 +2,11 @@ import React from "react";
 import "./StudentLecture.css";
 
 const StudentLecture = ({ lectureData }) => {
-    console.log(lectureData);
     const handleButtonClick = (index) => {
         const isConfirmed = window.confirm("정말로 삭제하시겠습니까?");
         if (isConfirmed) {
             console.log("선택된 강의가 삭제되었습니다. 인덱스:", index);
         }
-    }
-
-    if (!Array.isArray(lectureData)) {
-        return <p>강의 데이터가 없습니다.</p>;
     }
 
     return (
