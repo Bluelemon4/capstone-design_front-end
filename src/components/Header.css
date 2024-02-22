@@ -37,6 +37,7 @@ body {
     min-width: 250px;
     max-width: 250px;
     justify-content: flex-end;
+    font-size: 15px;
 }
 
 .class_button {
@@ -45,6 +46,10 @@ body {
   border: none;
   padding: 8px 12px;
   cursor: pointer;
+}
+
+.class_button:hover {
+  text-decoration: underline;
 }
 
 .complete_button {
@@ -56,6 +61,10 @@ body {
   text-decoration: none;
 }
 
+.complete_button:hover {
+  text-decoration: underline;
+}
+
 .log_button {
   background-color: #2196F3;
   color: white;
@@ -63,4 +72,8 @@ body {
   width: 78px;
   padding: 8px 12px;
   cursor: pointer;
+}
+
+.log_button:hover {
+  text-decoration: underline;
 }

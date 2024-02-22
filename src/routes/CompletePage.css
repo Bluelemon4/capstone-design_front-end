@@ -1,0 +1,33 @@
+.completepage_container {
+    text-align: center;
+}
+
+.completepage_title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.completepage_text {
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.completepage_link {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.completepage_link:hover {
+    text-decoration: underline;
+}
+
+.completepage_content {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 50px;
+}

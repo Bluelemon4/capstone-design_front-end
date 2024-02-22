@@ -1,24 +1,40 @@
 import React, { useState } from "react";
 import "./StudentLecture.css";
+//import axios from "axios";
 
-const StudentLecture = ({ lectureData, onDelete }) => {
+const StudentLecture = ({ lectureData, /*onDelete, mileageData, isCompleted*/ }) => {
     const [mileage, setMileage] = useState(lectureData.map(() => ""));
 
     const handleMileageChange = (event, index) => {
-        const value = event.target.value;
-        if (!isNaN(value)) {
-            if (value > 40 || value < 0) {
-                window.alert("베팅 가능한 최대 마일리지는 40, 최소 마일리지는 0 입니다.");
-            }
-            else {
-                const updatedMileage = [...mileage];
-                updatedMileage[index] = value;
-                setMileage(updatedMileage);
-            }
-        }
-    }
+        //if (!isCompleted) {
+            const value = event.target.value;
+            if (!isNaN(value)) {
+                if (value > 40 || value < 0) {
+                    window.alert("베팅 가능한 최대 마일리지는 40, 최소 마일리지는 0 입니다.");
+                }
+                else {
+                    const updatedMileage = [...mileage];
+                    updatedMileage[index] = value;
+                    setMileage(updatedMileage);
 
-    /*const handleButtonClick = (index) => {
+                    //sendMileageToServer(updatedMileage);
+                }
+            }
+        //}
+    };
+
+    /*const sendMileageToServer = async (updatedMileage) => {
+        try {
+            const response = await axios.post("http://example.com/api/mileage", updatedMileage);
+            console.log("마일리지 데이터가 성공적으로 전송되었습니다:", response.data);
+        } catch (error) {
+            console.error("마일리지 데이터 전송 중 오류 발생:", error);
+        }
+    };
+
+    
+
+    const handleButtonClick = (index) => {
         const isConfirmed = window.confirm("정말로 삭제하시겠습니까?");
         if (isConfirmed) {
             onDelete(lectureData[index].id);
@@ -44,17 +60,17 @@ const StudentLecture = ({ lectureData, onDelete }) => {
                 <tbody>
                     {lectureData.map((lecture, index) => (
                         <tr key={index}>
-                            <td>
+                            <td>{/*isCompleted ? mileageData[index] : (*/
                                 <input 
-                                    type="number"
-                                    value={mileage[index]}
-                                    onChange={(event) => handleMileageChange(event, index)}
-                                    placeholder="마일리지 입력"
-                                    min={0}
-                                    max={40}
-                                    style={{width: "100px"}}
-                                />
-                            </td>
+                                type="number"
+                                value={mileage[index]}
+                                onChange={(event) => handleMileageChange(event, index)}
+                                placeholder="마일리지 입력"
+                                min={0}
+                                max={40}
+                                style={{width: "100px"}}
+                            />
+                            /*)*/}</td>
                             <td>{lecture.subjectCode}</td>
                             <td>{lecture.division}</td>
                             <td>{lecture.subject}</td>
